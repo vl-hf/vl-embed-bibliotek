@@ -1,0 +1,1202 @@
+/*! VL embed-bygger 2.0.3 – felles stilark for metric@2, timeline@2, chart@3, email@2 og sms@2.
+    Generert fra malene i pluginen av library/build_library.py. Ikke rediger denne fila direkte. */
+
+/* ---------------------------------------------------------------- metric@2 */
+.vl-metric-embed-v2 {
+  --vl-metric-text: #333333;
+  --vl-metric-muted: #686864;
+  --vl-metric-border: rgba(51, 51, 51, 0.15);
+  --vl-metric-soft: #f3f3f0;
+  --vl-metric-red: #c11520;
+
+  width: 100%;
+  margin: 0 auto;
+  color: var(--vl-metric-text);
+  background: transparent;
+  font-family: "Breve Sans Text", "Breve Sans", Arial, sans-serif !important;
+  box-sizing: border-box;
+}
+
+.vl-metric-embed-v2,
+.vl-metric-embed-v2 *,
+.vl-metric-embed-v2 .vl-metric-header,
+.vl-metric-embed-v2 .vl-metric-title,
+.vl-metric-embed-v2 .vl-metric-explainer,
+.vl-metric-embed-v2 .vl-metric-panel,
+.vl-metric-embed-v2 .vl-metric-grid,
+.vl-metric-embed-v2 .vl-metric-item,
+.vl-metric-embed-v2 .vl-metric-eyebrow,
+.vl-metric-embed-v2 .vl-metric-value,
+.vl-metric-embed-v2 .vl-metric-label,
+.vl-metric-embed-v2 .vl-metric-context,
+.vl-metric-embed-v2 .vl-metric-footer,
+.vl-metric-embed-v2 .vl-metric-source,
+.vl-metric-embed-v2 .vl-metric-note {
+  font-family: "Breve Sans Text", "Breve Sans", Arial, sans-serif !important;
+  box-sizing: border-box;
+}
+
+.vl-metric-embed-v2 .vl-metric-header {
+  margin: 0 0 18px;
+}
+
+.vl-metric-embed-v2 .vl-metric-title {
+  max-width: 820px;
+  margin: 0;
+  color: var(--vl-metric-text);
+  font-size: clamp(26px, 4vw, 34px);
+  font-weight: 700 !important;
+  line-height: 1.08;
+  letter-spacing: -0.014em;
+}
+
+.vl-metric-embed-v2 .vl-metric-explainer {
+  max-width: 760px;
+  margin: 8px 0 0;
+  color: var(--vl-metric-text);
+  font-size: clamp(15px, 2vw, 18px);
+  font-weight: 400 !important;
+  line-height: 1.42;
+}
+
+.vl-metric-embed-v2 .vl-metric-panel {
+  padding: clamp(18px, 3vw, 28px) 0;
+  border-top: 1px solid var(--vl-metric-border);
+  border-bottom: 1px solid var(--vl-metric-border);
+}
+
+.vl-metric-embed-v2 .vl-metric-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+}
+
+.vl-metric-embed-v2 .vl-metric-item {
+  min-width: 0;
+  padding: clamp(17px, 2.5vw, 24px);
+  border-radius: 7px;
+  background: var(--vl-metric-soft);
+}
+
+.vl-metric-embed-v2 .vl-metric-eyebrow,
+.vl-metric-embed-v2 .vl-metric-value,
+.vl-metric-embed-v2 .vl-metric-label,
+.vl-metric-embed-v2 .vl-metric-context {
+  margin: 0;
+}
+
+.vl-metric-embed-v2 .vl-metric-eyebrow {
+  margin-bottom: 7px;
+  color: var(--vl-metric-muted);
+  font-size: 12px;
+  font-weight: 700 !important;
+  line-height: 1.25;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.vl-metric-embed-v2 .vl-metric-value {
+  color: var(--vl-metric-text);
+  font-size: clamp(38px, 7vw, 60px);
+  font-weight: 700 !important;
+  line-height: 0.98;
+  letter-spacing: -0.025em;
+  overflow-wrap: anywhere;
+}
+
+.vl-metric-embed-v2 .vl-metric-item[data-vl-metric-emphasis="true"] .vl-metric-value {
+  color: var(--vl-metric-red);
+}
+
+.vl-metric-embed-v2 .vl-metric-label {
+  margin-top: 10px;
+  color: var(--vl-metric-text);
+  font-size: clamp(15px, 2vw, 17px);
+  font-weight: 700 !important;
+  line-height: 1.3;
+}
+
+.vl-metric-embed-v2 .vl-metric-context {
+  margin-top: 5px;
+  color: var(--vl-metric-muted);
+  font-size: 13px;
+  font-weight: 400 !important;
+  line-height: 1.4;
+}
+
+.vl-metric-embed-v2[data-vl-metric-layout="hero"] .vl-metric-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.vl-metric-embed-v2[data-vl-metric-layout="hero"] .vl-metric-item {
+  padding: clamp(8px, 2vw, 16px) 0 clamp(5px, 1.5vw, 10px);
+  background: transparent;
+  border-radius: 0;
+}
+
+.vl-metric-embed-v2[data-vl-metric-layout="hero"] .vl-metric-item::before {
+  display: block;
+  width: 54px;
+  height: 5px;
+  margin-bottom: clamp(18px, 3vw, 27px);
+  border-radius: 999px;
+  background: var(--vl-metric-red);
+  content: "";
+}
+
+.vl-metric-embed-v2[data-vl-metric-layout="hero"] .vl-metric-value {
+  max-width: 900px;
+  font-size: clamp(54px, 12vw, 92px);
+  line-height: 0.92;
+}
+
+.vl-metric-embed-v2[data-vl-metric-layout="hero"] .vl-metric-label {
+  max-width: 690px;
+  margin-top: 14px;
+  font-size: clamp(17px, 2.5vw, 21px);
+  line-height: 1.28;
+}
+
+.vl-metric-embed-v2[data-vl-metric-layout="comparison"] .vl-metric-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+}
+
+.vl-metric-embed-v2[data-vl-metric-layout="comparison"] .vl-metric-item {
+  padding: clamp(12px, 2.5vw, 24px) clamp(16px, 3vw, 30px);
+  border-radius: 0;
+  background: transparent;
+}
+
+.vl-metric-embed-v2[data-vl-metric-layout="comparison"] .vl-metric-item + .vl-metric-item {
+  border-left: 1px solid var(--vl-metric-border);
+}
+
+.vl-metric-embed-v2 .vl-metric-footer {
+  margin-top: 10px;
+  color: var(--vl-metric-muted);
+  font-size: 12px;
+  font-weight: 400 !important;
+  line-height: 1.45;
+}
+
+.vl-metric-embed-v2 .vl-metric-source,
+.vl-metric-embed-v2 .vl-metric-note {
+  margin: 0;
+}
+
+.vl-metric-embed-v2 .vl-metric-note {
+  margin-top: 3px;
+}
+
+.vl-metric-embed-v2 .vl-metric-sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+@media (max-width: 560px) {
+  .vl-metric-embed-v2 .vl-metric-grid,
+  .vl-metric-embed-v2[data-vl-metric-layout="comparison"] .vl-metric-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .vl-metric-embed-v2[data-vl-metric-layout="comparison"] .vl-metric-item {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .vl-metric-embed-v2[data-vl-metric-layout="comparison"] .vl-metric-item + .vl-metric-item {
+    margin-top: 18px;
+    padding-top: 20px;
+    border-top: 1px solid var(--vl-metric-border);
+    border-left: 0;
+  }
+}
+
+/* ---------------------------------------------------------------- timeline@2 */
+.vl-timeline-embed-v2 {
+  --vl-timeline-text: #333333;
+  --vl-timeline-muted: #686864;
+  --vl-timeline-border: rgba(51, 51, 51, 0.15);
+  --vl-timeline-rail: #b9bdb8;
+  --vl-timeline-marker: #68757d;
+  --vl-timeline-red: #c11520;
+  --vl-timeline-date-col: 132px;
+  --vl-timeline-gap: 30px;
+  --vl-timeline-axis: calc(var(--vl-timeline-date-col) + var(--vl-timeline-gap) / 2);
+
+  width: 100%;
+  margin: 0 auto;
+  color: var(--vl-timeline-text);
+  background: transparent;
+  font-family: "Breve Sans Text", "Breve Sans", Arial, sans-serif !important;
+  box-sizing: border-box;
+}
+
+.vl-timeline-embed-v2,
+.vl-timeline-embed-v2 *,
+.vl-timeline-embed-v2 .vl-timeline-header,
+.vl-timeline-embed-v2 .vl-timeline-title,
+.vl-timeline-embed-v2 .vl-timeline-explainer,
+.vl-timeline-embed-v2 .vl-timeline-list,
+.vl-timeline-embed-v2 .vl-timeline-event,
+.vl-timeline-embed-v2 .vl-timeline-period,
+.vl-timeline-embed-v2 .vl-timeline-period-label,
+.vl-timeline-embed-v2 .vl-timeline-date,
+.vl-timeline-embed-v2 .vl-timeline-content,
+.vl-timeline-embed-v2 .vl-timeline-event-title,
+.vl-timeline-embed-v2 .vl-timeline-text,
+.vl-timeline-embed-v2 .vl-timeline-footer,
+.vl-timeline-embed-v2 .vl-timeline-source,
+.vl-timeline-embed-v2 .vl-timeline-note {
+  font-family: "Breve Sans Text", "Breve Sans", Arial, sans-serif !important;
+  box-sizing: border-box;
+}
+
+.vl-timeline-embed-v2 .vl-timeline-header {
+  margin: 0 0 18px;
+}
+
+.vl-timeline-embed-v2 .vl-timeline-title {
+  max-width: 820px;
+  margin: 0;
+  color: var(--vl-timeline-text);
+  font-size: clamp(26px, 4vw, 34px);
+  font-weight: 700 !important;
+  line-height: 1.08;
+  letter-spacing: -0.014em;
+}
+
+.vl-timeline-embed-v2 .vl-timeline-explainer {
+  max-width: 760px;
+  margin: 8px 0 0;
+  color: var(--vl-timeline-text);
+  font-size: clamp(15px, 2vw, 18px);
+  font-weight: 400 !important;
+  line-height: 1.42;
+}
+
+/* Defensiv nullstilling mot globale liste-regler i vertssiden. */
+.vl-timeline-embed-v2 .vl-timeline-list,
+.vl-timeline-embed-v2 .vl-timeline-event,
+.vl-timeline-embed-v2 .vl-timeline-period {
+  list-style: none !important;
+  margin: 0 !important;
+  text-indent: 0 !important;
+}
+
+.vl-timeline-embed-v2 .vl-timeline-list {
+  position: relative;
+  padding: clamp(20px, 3vw, 28px) 0 clamp(6px, 1.5vw, 10px) !important;
+  border-top: 1px solid var(--vl-timeline-border);
+  border-bottom: 1px solid var(--vl-timeline-border);
+}
+
+.vl-timeline-embed-v2 .vl-timeline-event,
+.vl-timeline-embed-v2 .vl-timeline-period {
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--vl-timeline-date-col) minmax(0, 1fr);
+  column-gap: var(--vl-timeline-gap);
+  padding: 0 0 clamp(20px, 3vw, 26px) !important;
+}
+
+/* Linjen gjennom tidslinjen. */
+.vl-timeline-embed-v2 .vl-timeline-event::before,
+.vl-timeline-embed-v2 .vl-timeline-period::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(var(--vl-timeline-axis) - 1px);
+  width: 2px;
+  background: var(--vl-timeline-rail);
+  content: "";
+}
+
+.vl-timeline-embed-v2 .vl-timeline-list > :first-child::before {
+  top: 8px;
+}
+
+.vl-timeline-embed-v2 .vl-timeline-list > :last-child::before {
+  bottom: auto;
+  height: 8px;
+}
+
+.vl-timeline-embed-v2 .vl-timeline-list > :only-child::before {
+  display: none;
+}
+
+/* Markør for hver hendelse. */
+.vl-timeline-embed-v2 .vl-timeline-event::after {
+  position: absolute;
+  top: 3px;
+  left: calc(var(--vl-timeline-axis) - 7px);
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--vl-timeline-marker);
+  border-radius: 50%;
+  background: #ffffff;
+  content: "";
+}
+
+.vl-timeline-embed-v2 .vl-timeline-event[data-vl-timeline-emphasis="true"]::after {
+  border-color: var(--vl-timeline-red);
+  background: var(--vl-timeline-red);
+}
+
+.vl-timeline-embed-v2 .vl-timeline-date {
+  display: block;
+  padding-top: 1px;
+  color: var(--vl-timeline-muted);
+  font-size: 14px;
+  font-weight: 700 !important;
+  line-height: 1.3;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.vl-timeline-embed-v2 .vl-timeline-event[data-vl-timeline-emphasis="true"] .vl-timeline-date {
+  color: var(--vl-timeline-red);
+}
+
+.vl-timeline-embed-v2 .vl-timeline-content {
+  min-width: 0;
+}
+
+.vl-timeline-embed-v2 .vl-timeline-event-title {
+  margin: 0;
+  color: var(--vl-timeline-text);
+  font-size: clamp(17px, 2.2vw, 19px);
+  font-weight: 700 !important;
+  line-height: 1.28;
+  overflow-wrap: anywhere;
+}
+
+.vl-timeline-embed-v2 .vl-timeline-text {
+  max-width: 640px;
+  margin: 5px 0 0;
+  color: var(--vl-timeline-text);
+  font-size: clamp(15px, 1.9vw, 16px);
+  font-weight: 400 !important;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+/* Periodeoverskrift (for eksempel et årstall) som deler opp lange tidslinjer. */
+.vl-timeline-embed-v2 .vl-timeline-period::after {
+  position: absolute;
+  top: 6px;
+  left: calc(var(--vl-timeline-axis) - 8px);
+  width: 16px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--vl-timeline-text);
+  content: "";
+}
+
+.vl-timeline-embed-v2 .vl-timeline-period-label {
+  grid-column: 2;
+  margin: 0;
+  color: var(--vl-timeline-text);
+  font-size: 13px;
+  font-weight: 700 !important;
+  line-height: 1.3;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.vl-timeline-embed-v2 .vl-timeline-footer {
+  margin-top: 10px;
+  color: var(--vl-timeline-muted);
+  font-size: 12px;
+  font-weight: 400 !important;
+  line-height: 1.45;
+}
+
+.vl-timeline-embed-v2 .vl-timeline-source,
+.vl-timeline-embed-v2 .vl-timeline-note {
+  margin: 0;
+}
+
+.vl-timeline-embed-v2 .vl-timeline-note {
+  margin-top: 3px;
+}
+
+.vl-timeline-embed-v2 .vl-timeline-sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+@media (max-width: 560px) {
+  .vl-timeline-embed-v2 {
+    --vl-timeline-axis: 8px;
+  }
+
+  .vl-timeline-embed-v2 .vl-timeline-event,
+  .vl-timeline-embed-v2 .vl-timeline-period {
+    grid-template-columns: minmax(0, 1fr);
+    padding-left: 30px !important;
+  }
+
+  .vl-timeline-embed-v2 .vl-timeline-date {
+    margin-bottom: 3px;
+    text-align: left;
+  }
+
+  .vl-timeline-embed-v2 .vl-timeline-period-label {
+    grid-column: 1;
+  }
+}
+
+/* ---------------------------------------------------------------- chart@3 */
+.vl-chart-embed-v3 {
+  --vl-chart-text: #333333;
+  --vl-chart-muted: #686864;
+  --vl-chart-border: rgba(51, 51, 51, 0.14);
+  --vl-chart-grid: rgba(51, 51, 51, 0.10);
+  --vl-chart-subtle: #f3f3f0;
+  --vl-chart-height: 390px;
+
+  width: 100%;
+  margin: 0 auto;
+  color: var(--vl-chart-text);
+  background: transparent;
+  font-family: "Breve Sans Text", "Breve Sans", Arial, sans-serif !important;
+  box-sizing: border-box;
+}
+
+.vl-chart-embed-v3,
+.vl-chart-embed-v3 *,
+.vl-chart-embed-v3 .vl-chart-header,
+.vl-chart-embed-v3 .vl-chart-title,
+.vl-chart-embed-v3 .vl-chart-explainer,
+.vl-chart-embed-v3 .vl-chart-card,
+.vl-chart-embed-v3 .vl-chart-legend,
+.vl-chart-embed-v3 .vl-chart-legend-item,
+.vl-chart-embed-v3 .vl-chart-wrap,
+.vl-chart-embed-v3 .vl-chart-footer,
+.vl-chart-embed-v3 .vl-chart-source,
+.vl-chart-embed-v3 .vl-chart-note,
+.vl-chart-embed-v3 .vl-chart-data-table,
+.vl-chart-embed-v3 .vl-chart-data-table caption,
+.vl-chart-embed-v3 .vl-chart-data-table th,
+.vl-chart-embed-v3 .vl-chart-data-table td,
+.vl-chart-embed-v3 .vl-chart-error,
+.vl-chart-embed-v3 canvas {
+  font-family: "Breve Sans Text", "Breve Sans", Arial, sans-serif !important;
+  box-sizing: border-box;
+}
+
+.vl-chart-embed-v3 .vl-chart-header {
+  margin: 0 0 18px;
+}
+
+.vl-chart-embed-v3 .vl-chart-title {
+  margin: 0;
+  max-width: 820px;
+  color: var(--vl-chart-text);
+  font-size: clamp(26px, 4vw, 34px);
+  font-weight: 700 !important;
+  line-height: 1.08;
+  letter-spacing: -0.012em;
+}
+
+.vl-chart-embed-v3 .vl-chart-explainer {
+  margin: 8px 0 0;
+  max-width: 760px;
+  color: var(--vl-chart-text);
+  font-size: clamp(15px, 2vw, 18px);
+  font-weight: 400 !important;
+  line-height: 1.42;
+}
+
+.vl-chart-embed-v3 .vl-chart-card {
+  border-top: 1px solid var(--vl-chart-border);
+  border-bottom: 1px solid var(--vl-chart-border);
+  padding: clamp(16px, 2.7vw, 24px) 0 clamp(14px, 2.3vw, 21px);
+  background: transparent;
+}
+
+.vl-chart-embed-v3 .vl-chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px 18px;
+  margin: 0 0 15px;
+  color: var(--vl-chart-text);
+  font-size: 14px;
+  font-weight: 400 !important;
+  line-height: 1.28;
+}
+
+.vl-chart-embed-v3 .vl-chart-legend[hidden] {
+  display: none;
+}
+
+.vl-chart-embed-v3 .vl-chart-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.vl-chart-embed-v3 .vl-chart-swatch {
+  width: 16px;
+  height: 10px;
+  display: inline-block;
+  flex: 0 0 auto;
+  border-radius: 2px;
+  background: var(--vl-chart-swatch, #68757d);
+}
+
+/* Defensiv reset mot globale Labrador-regler for generelle span-elementer. */
+.vl-chart-embed-v3 .vl-chart-swatch--line {
+  display: inline-block !important;
+  flex: 0 0 19px !important;
+  width: 19px !important;
+  min-width: 19px !important;
+  max-width: 19px !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  max-height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  border-top: 3px solid var(--vl-chart-swatch, #68757d) !important;
+  border-radius: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+  transform: none !important;
+  clip-path: none !important;
+}
+
+.vl-chart-embed-v3 .vl-chart-swatch--line[data-vl-dashed="true"] {
+  border-top-style: dashed !important;
+}
+
+.vl-chart-embed-v3 .vl-chart-swatch--line::before,
+.vl-chart-embed-v3 .vl-chart-swatch--line::after {
+  content: none !important;
+  display: none !important;
+}
+
+.vl-chart-embed-v3[data-vl-chart-radial="true"] .vl-chart-legend {
+  justify-content: center;
+}
+
+.vl-chart-embed-v3[data-vl-chart-radial="true"] .vl-chart-swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+/* Defensiv reset mot breddebegrensninger fra verts-CSS i Labrador. */
+.vl-chart-embed-v3 .vl-chart-wrap {
+  position: relative;
+  display: none;
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  height: var(--vl-chart-height);
+  min-height: 260px;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.vl-chart-embed-v3[data-vl-chart-enhanced="true"] .vl-chart-wrap {
+  display: block;
+}
+
+.vl-chart-embed-v3[data-vl-chart-enhanced="true"][data-vl-chart-radial="true"] .vl-chart-wrap {
+  width: min(100%, 390px) !important;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto !important;
+}
+
+/* Canvas må nullstille globale medieregler fra Labrador. */
+.vl-chart-embed-v3 canvas {
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  aspect-ratio: auto !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.vl-chart-embed-v3 .vl-chart-footer {
+  margin: 10px 0 0;
+  color: var(--vl-chart-muted);
+  font-size: 13px;
+  font-weight: 400 !important;
+  line-height: 1.42;
+}
+
+.vl-chart-embed-v3 .vl-chart-source,
+.vl-chart-embed-v3 .vl-chart-note {
+  margin: 0;
+}
+
+.vl-chart-embed-v3 .vl-chart-note {
+  margin-top: 4px;
+}
+
+.vl-chart-embed-v3 .vl-chart-data-table {
+  width: 100%;
+  margin-top: 14px;
+  border-collapse: collapse;
+  color: var(--vl-chart-text);
+  font-size: 13px;
+  line-height: 1.38;
+}
+
+.vl-chart-embed-v3 .vl-chart-data-table caption {
+  padding: 0 0 8px;
+  font-size: 14px;
+  font-weight: 700 !important;
+  text-align: left;
+}
+
+.vl-chart-embed-v3 .vl-chart-data-table th,
+.vl-chart-embed-v3 .vl-chart-data-table td {
+  padding: 7px 8px;
+  border-bottom: 1px solid var(--vl-chart-border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.vl-chart-embed-v3 .vl-chart-data-table th {
+  font-weight: 700 !important;
+}
+
+.vl-chart-embed-v3 .vl-chart-data-table--fallback {
+  margin-top: 16px;
+  padding-top: 2px;
+}
+
+.vl-chart-embed-v3[data-vl-chart-enhanced="true"]:not([data-vl-chart-error="true"]) .vl-chart-data-table {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.vl-chart-embed-v3 .vl-chart-sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.vl-chart-embed-v3 .vl-chart-error {
+  display: none;
+  margin: 10px 0 0;
+  color: var(--vl-chart-muted);
+  font-size: 13px;
+  line-height: 1.42;
+}
+
+.vl-chart-embed-v3[data-vl-chart-error="true"] .vl-chart-error {
+  display: block;
+}
+
+/* Forklaring som vises hvis grafen ikke er tegnet etter seks sekunder, for eksempel
+   uten JavaScript eller i et redigeringsverktøy som ikke kjører script. Skjules når
+   grafen er tegnet, og når runtimen selv viser feilmelding. */
+.vl-chart-embed-v3 .vl-chart-fallback-note {
+  margin: 0 0 10px;
+  color: var(--vl-chart-muted);
+  font-size: 13px;
+  line-height: 1.42;
+}
+
+.vl-chart-embed-v3:not([data-vl-chart-enhanced="true"]):not([data-vl-chart-error="true"]) .vl-chart-fallback-note[hidden] {
+  display: block;
+  animation: vl-chart-fallback-appear 0s linear 6s both;
+}
+
+@keyframes vl-chart-fallback-appear {
+  from { visibility: hidden; }
+  to { visibility: visible; }
+}
+
+.vl-chart-embed-v3[data-vl-chart-error="true"] .vl-chart-wrap,
+.vl-chart-embed-v3[data-vl-chart-error="true"] .vl-chart-legend {
+  display: none;
+}
+
+@media (max-width: 680px) {
+
+  .vl-chart-embed-v3 .vl-chart-legend {
+    gap: 8px 13px;
+    margin-bottom: 12px;
+    font-size: 13px;
+  }
+
+  .vl-chart-embed-v3 .vl-chart-card {
+    padding-top: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vl-chart-embed-v3 * {
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------------------------------------------------------------- email@2 */
+.vl-email-embed-v2 {
+  --vl-email-text: #333333;
+  --vl-email-muted: #6b7280;
+  --vl-email-border: rgba(51, 51, 51, 0.14);
+  --vl-email-soft-border: rgba(51, 51, 51, 0.09);
+  --vl-email-card-bg: #ffffff;
+
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: var(--vl-email-text);
+  background: transparent;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif !important;
+  box-sizing: border-box;
+}
+
+.vl-email-embed-v2,
+.vl-email-embed-v2 *,
+.vl-email-embed-v2 .vl-email-window,
+.vl-email-embed-v2 .vl-email-card,
+.vl-email-embed-v2 .vl-email-header,
+.vl-email-embed-v2 .vl-email-heading-row,
+.vl-email-embed-v2 .vl-email-subject,
+.vl-email-embed-v2 .vl-email-date,
+.vl-email-embed-v2 .vl-email-meta,
+.vl-email-embed-v2 .vl-email-meta dt,
+.vl-email-embed-v2 .vl-email-meta dd,
+.vl-email-embed-v2 .vl-email-body,
+.vl-email-embed-v2 .vl-email-body p,
+.vl-email-embed-v2 .vl-email-signature,
+.vl-email-embed-v2 .vl-redacted {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif !important;
+  box-sizing: border-box;
+}
+
+.vl-email-embed-v2 .vl-email-window {
+  width: 100%;
+  padding: clamp(14px, 3vw, 28px);
+  background: transparent;
+  border: 0;
+  border-radius: 12px;
+}
+
+.vl-email-embed-v2 .vl-email-card {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  color: var(--vl-email-text);
+  background: var(--vl-email-card-bg);
+  border: 1px solid var(--vl-email-border);
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04),
+    0 8px 24px rgba(0, 0, 0, 0.035);
+}
+
+.vl-email-embed-v2 .vl-email-card + .vl-email-card {
+  margin-top: clamp(18px, 3vw, 28px);
+}
+
+.vl-email-embed-v2 .vl-email-header {
+  padding: clamp(17px, 3vw, 24px) clamp(17px, 3.2vw, 26px)
+    clamp(15px, 2.6vw, 20px);
+  background: #ffffff;
+  border-bottom: 1px solid var(--vl-email-soft-border);
+}
+
+.vl-email-embed-v2 .vl-email-heading-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px 20px;
+  align-items: start;
+}
+
+.vl-email-embed-v2 .vl-email-subject {
+  margin: 0;
+  color: var(--vl-email-text);
+  font-size: clamp(18px, 2.8vw, 24px);
+  line-height: 1.18;
+  font-weight: 650;
+  letter-spacing: -0.012em;
+  overflow-wrap: anywhere;
+}
+
+.vl-email-embed-v2 .vl-email-date {
+  margin: 3px 0 0;
+  color: var(--vl-email-muted);
+  font-size: clamp(11px, 1.4vw, 13px);
+  line-height: 1.35;
+  font-weight: 400;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.vl-email-embed-v2 .vl-email-meta {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 4px 12px;
+  margin: 14px 0 0;
+  color: var(--vl-email-text);
+  font-size: clamp(12px, 1.6vw, 14px);
+  line-height: 1.4;
+}
+
+.vl-email-embed-v2 .vl-email-meta dt,
+.vl-email-embed-v2 .vl-email-meta dd {
+  margin: 0;
+  padding: 0;
+}
+
+.vl-email-embed-v2 .vl-email-meta dt {
+  color: var(--vl-email-muted);
+  font-weight: 400;
+}
+
+.vl-email-embed-v2 .vl-email-meta dd {
+  min-width: 0;
+  color: var(--vl-email-text);
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.vl-email-embed-v2 .vl-email-body {
+  padding: clamp(20px, 3.4vw, 28px) clamp(17px, 3.2vw, 26px)
+    clamp(22px, 3.6vw, 30px);
+  color: var(--vl-email-text);
+  background: #ffffff;
+  font-size: clamp(15px, 1.9vw, 17px);
+  line-height: 1.55;
+  font-weight: 400;
+  overflow-wrap: anywhere;
+}
+
+.vl-email-embed-v2 .vl-email-body p {
+  margin: 0;
+  color: var(--vl-email-text);
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+}
+
+.vl-email-embed-v2 .vl-email-body p + p {
+  margin-top: 1em;
+}
+
+.vl-email-embed-v2 .vl-email-signature {
+  color: var(--vl-email-text);
+}
+
+.vl-email-embed-v2 .vl-redacted {
+  display: inline-block;
+  min-width: 5.4em;
+  height: 1.08em;
+  vertical-align: -0.12em;
+  color: transparent !important;
+  background: #111111;
+  border: 1px solid #111111;
+  border-radius: 2px;
+  user-select: none;
+}
+
+@media (max-width: 520px) {
+  .vl-email-embed-v2 .vl-email-window {
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .vl-email-embed-v2 .vl-email-card {
+    border-radius: 6px;
+  }
+
+  .vl-email-embed-v2 .vl-email-header,
+  .vl-email-embed-v2 .vl-email-body {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .vl-email-embed-v2 .vl-email-heading-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 5px;
+  }
+
+  .vl-email-embed-v2 .vl-email-date {
+    grid-row: 1;
+    margin: 0;
+    font-size: 11px;
+    text-align: left;
+    white-space: normal;
+  }
+
+  .vl-email-embed-v2 .vl-email-subject {
+    grid-row: 2;
+  }
+
+  .vl-email-embed-v2 .vl-email-meta {
+    grid-template-columns: max-content minmax(0, 1fr);
+    gap: 4px 9px;
+  }
+}
+
+/* ---------------------------------------------------------------- sms@2 */
+.vl-sms-embed-v2 {
+  --vl-sms-text: #111111;
+  --vl-sms-muted: #767676;
+  --vl-sms-incoming: #e9e9eb;
+  --vl-sms-outgoing: #0a84ff;
+  --vl-sms-outgoing-text: #ffffff;
+  --vl-sms-redaction: #ffffff;
+
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: var(--vl-sms-text);
+  background: transparent;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif !important;
+  box-sizing: border-box;
+}
+
+.vl-sms-embed-v2,
+.vl-sms-embed-v2 *,
+.vl-sms-embed-v2 .vl-sms-thread,
+.vl-sms-embed-v2 .vl-sms-date,
+.vl-sms-embed-v2 .vl-sms-group,
+.vl-sms-embed-v2 .vl-sms-sender,
+.vl-sms-embed-v2 .vl-sms-bubble,
+.vl-sms-embed-v2 .vl-sms-time,
+.vl-sms-embed-v2 .vl-sms-redacted {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif !important;
+  box-sizing: border-box;
+}
+
+.vl-sms-embed-v2 .vl-sms-thread {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 430px;
+  margin: 0 auto;
+  padding: clamp(16px, 3vw, 28px) clamp(10px, 2.5vw, 24px);
+  background: transparent;
+}
+
+.vl-sms-embed-v2 .vl-sms-date {
+  align-self: center;
+  margin: 2px 0 clamp(16px, 2.8vw, 24px);
+  color: var(--vl-sms-muted);
+  font-size: clamp(11px, 1.4vw, 13px);
+  line-height: 1.3;
+  font-weight: 500;
+  text-align: center;
+  animation: vl-sms-date-reveal 420ms ease-out both;
+  animation-delay: calc(var(--vl-sms-sequence, 0) * 160ms);
+}
+
+.vl-sms-embed-v2 .vl-sms-date + .vl-sms-group {
+  margin-top: 0;
+}
+
+.vl-sms-embed-v2 .vl-sms-group {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  max-width: min(78%, 640px);
+  margin-top: clamp(12px, 2vw, 18px);
+  animation-duration: 520ms;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-fill-mode: both;
+  animation-delay: calc(var(--vl-sms-sequence, 0) * 160ms);
+}
+
+.vl-sms-embed-v2 .vl-sms-group--incoming {
+  align-self: flex-start;
+  align-items: flex-start;
+  animation-name: vl-sms-incoming-reveal;
+}
+
+.vl-sms-embed-v2 .vl-sms-group--outgoing {
+  align-self: flex-end;
+  align-items: flex-end;
+  animation-name: vl-sms-outgoing-reveal;
+}
+
+.vl-sms-embed-v2 .vl-sms-sender {
+  margin: 0 12px 5px;
+  color: var(--vl-sms-muted);
+  font-size: clamp(11px, 1.4vw, 13px);
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+.vl-sms-embed-v2 .vl-sms-bubble {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0;
+  padding: 9px 13px 10px;
+  border: 0;
+  border-radius: 19px;
+  font-size: clamp(15px, 1.8vw, 17px);
+  line-height: 1.35;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+.vl-sms-embed-v2 .vl-sms-bubble + .vl-sms-bubble {
+  margin-top: 3px;
+}
+
+.vl-sms-embed-v2 .vl-sms-group--incoming .vl-sms-bubble {
+  color: var(--vl-sms-text);
+  background: var(--vl-sms-incoming);
+}
+
+.vl-sms-embed-v2 .vl-sms-group--outgoing .vl-sms-bubble {
+  color: var(--vl-sms-outgoing-text);
+  background: var(--vl-sms-outgoing);
+}
+
+.vl-sms-embed-v2 .vl-sms-group--incoming .vl-sms-bubble:first-of-type:not(:last-of-type) {
+  border-bottom-left-radius: 7px;
+}
+
+.vl-sms-embed-v2 .vl-sms-group--incoming .vl-sms-bubble:not(:first-of-type):not(:last-of-type) {
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+
+.vl-sms-embed-v2 .vl-sms-group--incoming .vl-sms-bubble:last-of-type:not(:first-of-type) {
+  border-top-left-radius: 7px;
+}
+
+.vl-sms-embed-v2 .vl-sms-group--outgoing .vl-sms-bubble:first-of-type:not(:last-of-type) {
+  border-bottom-right-radius: 7px;
+}
+
+.vl-sms-embed-v2 .vl-sms-group--outgoing .vl-sms-bubble:not(:first-of-type):not(:last-of-type) {
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+.vl-sms-embed-v2 .vl-sms-group--outgoing .vl-sms-bubble:last-of-type:not(:first-of-type) {
+  border-top-right-radius: 7px;
+}
+
+.vl-sms-embed-v2 .vl-sms-time {
+  margin: 5px 11px 0;
+  color: var(--vl-sms-muted);
+  font-size: clamp(10px, 1.25vw, 12px);
+  line-height: 1.25;
+  font-weight: 400;
+}
+
+.vl-sms-embed-v2 .vl-sms-redacted {
+  display: inline-block;
+  min-width: 4.8em;
+  height: 1.05em;
+  vertical-align: -0.11em;
+  color: transparent !important;
+  background: var(--vl-sms-redaction);
+  border: 1px solid rgba(17, 17, 17, 0.14);
+  border-radius: 3px;
+  user-select: none;
+}
+
+@keyframes vl-sms-date-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes vl-sms-incoming-reveal {
+  from {
+    opacity: 0;
+    transform: translate3d(-10px, 5px, 0) scale(0.99);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes vl-sms-outgoing-reveal {
+  from {
+    opacity: 0;
+    transform: translate3d(10px, 5px, 0) scale(0.99);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vl-sms-embed-v2 .vl-sms-date,
+  .vl-sms-embed-v2 .vl-sms-group--incoming,
+  .vl-sms-embed-v2 .vl-sms-group--outgoing {
+    animation: none !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .vl-sms-embed-v2 .vl-sms-thread {
+    padding: 14px 6px 18px;
+  }
+
+  .vl-sms-embed-v2 .vl-sms-group {
+    max-width: 84%;
+  }
+
+  .vl-sms-embed-v2 .vl-sms-bubble {
+    padding: 8px 12px 9px;
+    border-radius: 18px;
+  }
+}
